@@ -7,7 +7,7 @@ import "./MainLayout.css"
 const MainLayout = ({ children }) => {
   return (
     <>
-      <Navbar collapseOnSelect sticky="top" className="navbar-custom" bg="dark" variant="dark" expand="lg">
+      <Navbar collapseOnSelect sticky="top" className="navbar-custom" bg="light" variant="light" expand="lg">
         <Container>
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

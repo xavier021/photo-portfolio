@@ -1,0 +1,30 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    margin: 30px;
+}
+
+.custom-tab{
+    margin-top: 20px;
+}
+
+.nav-item{
+    margin-right: 50px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: black;
+    background-color: white;
+    border-bottom: 1px black solid;
+    border-radius: 0;
+}
+
+.nav-link{
+    color: black;
+}
+
+.pill-custom{
+    color: black;
+}
