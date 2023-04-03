@@ -14,7 +14,7 @@ function Portfolio() {
         <Tabs
           defaultActiveKey="events"
           id="uncontrolled-tab-example"
-          className="mb-3 ms-auto custom-tab justify-content-end"
+          className="mb-3 custom-tab justify-content-end"
           variant="pills"
         >
           <Tab eventKey="events" title="Events" className="pill-custom">
