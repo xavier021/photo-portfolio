@@ -11,8 +11,6 @@ const MainLayout = ({ children }) => {
         collapseOnSelect
         sticky="top"
         className="navbar-custom"
-        bg="light"
-        variant="light"
         expand="lg"
       >
         <Container>

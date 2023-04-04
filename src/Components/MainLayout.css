@@ -1,4 +1,7 @@
+
 .navbar-custom{
     font-family: 'Montserrat', sans-serif;
-    border-bottom: 0.5px black solid;
+    border-bottom: 0.5px #C9D6DF solid;
+    background-color: white;
+    /* color: #C9D6DF; */
 }

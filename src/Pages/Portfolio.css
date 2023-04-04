@@ -17,7 +17,7 @@ h2{
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     color: black;
     background-color: white;
-    border-bottom: 1px black solid;
+    border-bottom: 1px #C9D6DF solid;
     border-radius: 0;
 }
 
