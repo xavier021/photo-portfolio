@@ -4,7 +4,8 @@ import "./Portfolio.css";
 
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import { Container, Row } from "react-bootstrap";
+// import { Container, Row } from "react-bootstrap";
+import {ImagePor, ImageLand, ImageEvent} from "../Components/Images";
 
 function Portfolio() {
   return (
@@ -18,13 +19,13 @@ function Portfolio() {
           variant="pills"
         >
           <Tab eventKey="events" title="Events" className="pill-custom">
-            <p>test</p>
+            <ImageEvent/>
           </Tab>
           <Tab eventKey="landscape" title="Landscape">
-            <p>test 2</p>
+            <ImageLand />
           </Tab>
           <Tab eventKey="portrait" title="Portrait">
-            <p>test 3</p>
+            <ImagePor />
           </Tab>
         </Tabs>
       {/* </Container> */}
