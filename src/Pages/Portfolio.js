@@ -11,7 +11,7 @@ function Portfolio() {
   return (
     <MainLayout>
       {/* <Container> */}
-      <h2 className="ms-auto">Portfolio</h2>
+      <h2 className="ms-auto">PORTFOLIO</h2>
         <Tabs
           defaultActiveKey="events"
           id="uncontrolled-tab-example"

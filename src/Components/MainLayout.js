@@ -17,15 +17,19 @@ const MainLayout = ({ children }) => {
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav >
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/portfolio">Portofolio</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
+            <Nav className="ms-auto">
+              <Nav.Item>
+                <Nav.Link href="/">Home</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/portfolio">Portofolio</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/about">About</Nav.Link>
+              </Nav.Item>
             </Nav>
             <Nav className="ms-auto">
-              <Nav.Link href="/contact">
-                Contact Us
-              </Nav.Link>
+              <Nav.Link href="/contact">Contact Us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
