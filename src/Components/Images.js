@@ -9,68 +9,106 @@ export function ImagePor() {
   const counter = useRef(0);
 
   const imageLoader = () => {
-    counter.current +=1;
-    if(counter.current >= portraits.length){
+    counter.current += 1;
+    if (counter.current >= portraits.length) {
       setLoading(false);
     }
-  }
+  };
 
   return (
     <Container>
       <Row>
-        <ImageList variant="woven" cols={3} gap={8}>
-          {portraits.map((item) => (
-            <ImageListItem key={item.img}>
+        <div style={{ display: loading ? "block" : "none" }}>
+          <Loader />
+        </div>
+        <div style={{ display: loading ? "none" : "block" }}>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {portraits.map((item) => (
+              <ImageListItem key={item.img}>
                 <img
                   src={`${item.img}?w=161&fit=crop&auto=format`}
                   srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
+                  onLoad={imageLoader}
                 />
-            </ImageListItem>
-          ))}
-        </ImageList>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
       </Row>
     </Container>
   );
 }
 
 export function ImageLand() {
+  const [loading, setLoading] = useState(true);
+  const counter = useRef(0);
+
+  const imageLoader = () => {
+    counter.current += 1;
+    if (counter.current >= landscape.length) {
+      setLoading(false);
+    }
+  };
+
   return (
     <Container>
       <Row>
-        <ImageList variant="woven" cols={3} gap={8}>
-          {landscape.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?w=161&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <div style={{ display: loading ? "block" : "none" }}>
+          <Loader />
+        </div>
+        <div style={{ display: loading ? "none" : "block" }}>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {landscape.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  onLoad={imageLoader}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
       </Row>
     </Container>
   );
 }
 
 export function ImageEvent() {
+  const [loading, setLoading] = useState(true);
+  const counter = useRef(0);
+
+  const imageLoader = () => {
+    counter.current += 1;
+    if (counter.current >= events.length) {
+      setLoading(false);
+    }
+  };
+
   return (
     <Container>
       <Row>
-        <ImageList variant="woven" cols={3} gap={8}>
-          {events.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?w=161&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <div style={{ display: loading ? "block" : "none" }}>
+          <Loader />
+        </div>
+        <div style={{ display: loading ? "none" : "block" }}>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {events.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  onLoad={imageLoader}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
       </Row>
     </Container>
   );
@@ -90,18 +128,6 @@ const portraits = [
     title: "Portrait 4",
   },
   {
-    img: "/View/DSC02606_KEN-POR_.webp",
-    title: "Bed",
-  },
-  {
-    img: "/View/DSC02552_KEN_.webp",
-    title: "Kitchen",
-  },
-  {
-    img: "/View/DSC02633_KEN_.webp",
-    title: "Sink",
-  },
-  {
     img: "/View/DSC03122(Bryan-POR).webp",
     title: "Books",
   },
@@ -112,6 +138,18 @@ const portraits = [
   {
     img: "/View/DSC03145(Bryan-POR).webp",
     title: "Candle",
+  },
+  {
+    img: "/View/DSC02606_KEN-POR_.webp",
+    title: "Bed",
+  },
+  {
+    img: "/View/DSC02552_KEN_.webp",
+    title: "Kitchen",
+  },
+  {
+    img: "/View/DSC02633_KEN_.webp",
+    title: "Sink",
   },
 ];
 

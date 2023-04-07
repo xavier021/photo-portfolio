@@ -17,7 +17,7 @@ function Home() {
             <h1 className="custom-title">PHOTOGRPAHER</h1>
           </Col>
           <Col className="custom-col" md>
-            <div style={{ display: loading ? "block" : "none" }}>
+            <div className="loader-div" style={{ display: loading ? "block" : "none" }}>
                 <Loader />
             </div>
             <div style={{ display: loading ? "none" : "block" }}>
