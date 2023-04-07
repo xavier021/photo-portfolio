@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import Loader from "./LoadingImg";
 
 export function ImagePor() {
+  const [loading, setLoading] = useState(true);
+  const counter = useRef(0);
+
+  const imageLoader = () => {
+    counter.current +=1;
+    if(counter.current >= portraits.length){
+      setLoading(false);
+    }
+  }
+
   return (
     <Container>
       <Row>
         <ImageList variant="woven" cols={3} gap={8}>
           {portraits.map((item) => (
             <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?w=161&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                alt={item.title}
-                loading="lazy"
-              />
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                />
             </ImageListItem>
           ))}
         </ImageList>

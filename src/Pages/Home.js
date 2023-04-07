@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "../Components/MainLayout";
-import { Col,Row, Container, Image } from "react-bootstrap";
-import "./Home.css"
+import { Col, Row, Container, Image } from "react-bootstrap";
+import "./Home.css";
 import { Box } from "@mui/material";
+import Loader from "../Components/LoadingImg";
 
 function Home() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <MainLayout>
-    <Container className="custom-container" fluid>
+      <Container className="custom-container" fluid>
         <Row className="custom-row">
-            <Col>
-                <h2 className="custom-name">Xavier Santana</h2>
-                <h1 className="custom-title">PHOTOGRPAHER</h1>
-            </Col>
-            <Col className="custom-col" md>
-                <Image 
-                    src="/View/DSC04910-X.webp"
-                    fluid
-                    className="custom-pic"
-                />
-            </Col>
+          <Col>
+            <h2 className="custom-name">Xavier Santana</h2>
+            <h1 className="custom-title">PHOTOGRPAHER</h1>
+          </Col>
+          <Col className="custom-col" md>
+            <div style={{ display: loading ? "block" : "none" }}>
+                <Loader />
+            </div>
+            <div style={{ display: loading ? "none" : "block" }}>
+              <Image
+                src="/View/DSC04910-X.webp"
+                fluid
+                className="custom-pic"
+                onLoad={() => setLoading(false)}
+              />
+            </div>
+          </Col>
         </Row>
-    </Container>
+      </Container>
     </MainLayout>
   );
 }
