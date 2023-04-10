@@ -19,13 +19,13 @@ function Portfolio() {
         className="mb-3 custom-tab justify-content-end"
         variant="pills"
       >
-        <Tab eventKey="events" title="Events" className="pill-custom">
+        <Tab eventKey="events" title="Events" className="pill-custom" mountOnEnter unmountOnExit>
           <ImageEvent />
         </Tab>
-        <Tab eventKey="landscape" title="Landscape">
+        <Tab eventKey="landscape" title="Landscape" mountOnEnter unmountOnExit>
           <ImageLand />
         </Tab>
-        <Tab eventKey="portrait" title="Portrait">
+        <Tab eventKey="portrait" title="Portrait" mountOnEnter unmountOnExit>
           <ImagePor />
         </Tab>
       </Tabs>

@@ -1,118 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Loader from "./LoadingImg";
-
-export function ImagePor() {
-  const [loading, setLoading] = useState(true);
-  const counter = useRef(0);
-
-  const imageLoader = () => {
-    counter.current += 1;
-    if (counter.current >= portraits.length) {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <Container>
-      <Row>
-        <div style={{ display: loading ? "block" : "none" }}>
-          <Loader />
-        </div>
-        <div style={{ display: loading ? "none" : "block" }}>
-          <ImageList variant="woven" cols={3} gap={8}>
-            {portraits.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  onLoad={imageLoader}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      </Row>
-    </Container>
-  );
-}
-
-export function ImageLand() {
-  const [loading, setLoading] = useState(true);
-  const counter = useRef(0);
-
-  const imageLoader = () => {
-    counter.current += 1;
-    if (counter.current >= landscape.length) {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <Container>
-      <Row>
-        <div style={{ display: loading ? "block" : "none" }}>
-          <Loader />
-        </div>
-        <div style={{ display: loading ? "none" : "block" }}>
-          <ImageList variant="woven" cols={3} gap={8}>
-            {landscape.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  onLoad={imageLoader}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      </Row>
-    </Container>
-  );
-}
-
-export function ImageEvent() {
-  const [loading, setLoading] = useState(true);
-  const counter = useRef(0);
-
-  const imageLoader = () => {
-    counter.current += 1;
-    if (counter.current >= events.length) {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <Container>
-      <Row>
-        <div style={{ display: loading ? "block" : "none" }}>
-          <Loader />
-        </div>
-        <div style={{ display: loading ? "none" : "block" }}>
-          <ImageList variant="woven" cols={3} gap={8}>
-            {events.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                  onLoad={imageLoader}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      </Row>
-    </Container>
-  );
-}
 
 const portraits = [
   {
@@ -230,3 +120,126 @@ const events = [
     title: "Sink",
   },
 ];
+
+export function ImagePor() {
+  const [loading, setLoading] = useState(true);
+  const counter = useRef(0);
+
+  const imageLoader = () => {
+    counter.current += 1;
+
+    console.log(counter)
+
+    if (counter.current >= portraits.length) {
+      setLoading(false);
+      console.log("Por " + counter);
+    }
+  };
+
+  return (
+    <Container>
+      <Row>
+        <div style={{ display: loading ? "block" : "none" }}>
+          <Loader />
+        </div>
+        <div style={{ display: loading ? "none" : "block" }}>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {portraits.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  // loading="lazy"
+                  onLoad={imageLoader}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
+      </Row>
+    </Container>
+  );
+}
+
+export function ImageLand() {
+  const [loadingLand, setLoadingLand] = useState(true);
+  const counter_land = useRef(0);
+
+  console.log("Counter at Land" + counter_land);
+
+  const imageLoader = () => {
+    counter_land.current += 1;
+
+    console.log("At land " + counter_land)
+
+    if (counter_land.current >= landscape.length) {
+      setLoadingLand(false);
+      console.log("Land " + counter_land);
+    }
+  };
+
+  return (
+    <Container>
+      <Row>
+        <div style={{ display: loadingLand ? "block" : "none" }}>
+          <Loader />
+        </div>
+        <div style={{ display: loadingLand ? "none" : "block" }}>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {landscape.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  // loading="lazy"
+                  onLoad={imageLoader}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
+      </Row>
+    </Container>
+  );
+}
+
+export function ImageEvent() {
+  const [loadingEvent, setLoadingEvent] = useState(true);
+  const counter = useRef(0);
+
+  console.log("Counter at Event " + counter);
+
+  const imageLoader = () => {
+    counter.current += 1;
+    if (counter.current >= events.length) {
+      setLoadingEvent(false);
+    }
+  };
+
+  return (
+    <Container>
+      <Row>
+        <div style={{ display: loadingEvent ? "block" : "none" }}>
+          <Loader />
+        </div>
+        <div style={{ display: loadingEvent ? "none" : "block" }}>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {events.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  // loading="lazy"
+                  onLoad={imageLoader}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
+      </Row>
+    </Container>
+  );
+}
