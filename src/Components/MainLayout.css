@@ -1,7 +1,18 @@
+body{
+    height: 100%;
+    padding-bottom: 73px;
+    /* overflow-y:auto; */
+}
 
 .navbar-custom{
     font-family: 'Montserrat', sans-serif;
     /* border-bottom: 0.5px #C9D6DF solid; */
-    background-color: white;
+    background-color: #EEEEEE;
     /* color: #C9D6DF; */
+    padding: 12px 0;
+}
+
+.content{
+    background-color: white;
+    z-index: 1;
 }

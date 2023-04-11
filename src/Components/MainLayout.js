@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./MainLayout.css";
+import Footer from "./Footer";
 
 const MainLayout = ({ children }) => {
   return (
@@ -14,7 +15,7 @@ const MainLayout = ({ children }) => {
         expand="lg"
       >
         <Container>
-          <Navbar.Brand href="/">Xavier</Navbar.Brand>
+          <Navbar.Brand href="/">Xavier Santana Photography</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
@@ -34,7 +35,8 @@ const MainLayout = ({ children }) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div>{children}</div>
+      <div className="content">{children}</div>
+      <Footer/>
     </>
   );
 };

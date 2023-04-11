@@ -1,0 +1,12 @@
+.custom-footer{
+    padding-top: 20px;
+    width: 100%;
+    z-index: -1;
+    background-color: #393E46;
+    margin-bottom: 0;
+}
+
+.custom-footer .nav-link{
+    color: white;
+
+}
