@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import MainLayout from "../Components/MainLayout";
+import MainLayout from "../Components/Layout/MainLayout";
 import "./Portfolio.css";
 
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 // import { Container, Row } from "react-bootstrap";
-import { ImagePor, ImageLand, ImageEvent } from "../Components/Images";
+import { ImagePor, ImageLand, ImageEvent } from "../Components/Gallery/Images";
 
 function Portfolio() {
 

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import Loader from "./LoadingImg";
+import Loader from "../Spinner/LoadingImg";
 
 const portraits = [
   {

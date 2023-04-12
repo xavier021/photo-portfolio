@@ -1,5 +1,5 @@
 import React from "react";
-import MainLayout from "../Components/MainLayout";
+import MainLayout from "../Components/Layout/MainLayout";
 
 function Contact(){
     return(

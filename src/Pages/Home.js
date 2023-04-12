@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import MainLayout from "../Components/MainLayout";
+import MainLayout from "../Components/Layout/MainLayout";
 import { Col, Row, Container, Image } from "react-bootstrap";
 import "./Home.css";
 import { Box } from "@mui/material";
-import Loader from "../Components/LoadingImg";
+import Loader from "../Components/Spinner/LoadingImg";
 
 function Home() {
   const [loading, setLoading] = useState(true);
