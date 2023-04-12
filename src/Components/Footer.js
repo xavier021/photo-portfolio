@@ -1,6 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./Footer.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
@@ -14,14 +17,14 @@ export default function Footer() {
             </li>
             <li className="nav-item">
               <a className="nav-link px-2" href="/portfolio">
-                Portfolio
+              <FontAwesomeIcon icon={faCamera} />
               </a>
             </li>
           </div>
           <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li className="nav-item">
               <a className="nav-link px-2" href="/about">
-                About
+              <FontAwesomeIcon icon={faInstagram} />
               </a>
             </li>
             <li className="nav-item">

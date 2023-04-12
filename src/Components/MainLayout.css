@@ -16,3 +16,11 @@ body{
     background-color: white;
     z-index: 1;
 }
+
+.test{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #EEEEEE;
+    margin-bottom: 0;
+}

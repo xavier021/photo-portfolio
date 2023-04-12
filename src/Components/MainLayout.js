@@ -30,7 +30,7 @@ const MainLayout = ({ children }) => {
               </Nav.Item>
             </Nav>
             <Nav className="ms-auto">
-              <Nav.Link href="/contact">Contact Us</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

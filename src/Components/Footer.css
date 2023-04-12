@@ -4,9 +4,14 @@
     z-index: -1;
     background-color: #393E46;
     margin-bottom: 0;
+    border-top-color: #222831;
 }
 
 .custom-footer .nav-link{
     color: white;
 
+}
+
+.border-top{
+    border-color: #222831;
 }
