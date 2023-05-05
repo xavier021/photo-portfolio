@@ -4,7 +4,6 @@ import { Container, Col, Row } from "react-bootstrap";
 
 function About() {
   return (
-    <MainLayout>
       <Container>
         <Row>
           <Col>
@@ -27,7 +26,6 @@ function About() {
           </Col>
         </Row>
       </Container>
-    </MainLayout>
   );
 }
 

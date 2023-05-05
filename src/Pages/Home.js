@@ -9,7 +9,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <MainLayout>
+    // <MainLayout>
       <Container className="custom-container" fluid>
         <Row className="custom-row">
           <Col>
@@ -17,21 +17,26 @@ function Home() {
             <h1 className="custom-title">PHOTOGRPAHER</h1>
           </Col>
           <Col className="custom-col" md>
-            <div className="loader-div" style={{ display: loading ? "block" : "none" }}>
-                <Loader />
+            <div
+              className="loader-div"
+              style={{ display: loading ? "block" : "none" }}
+            >
+              <Loader />
             </div>
             <div style={{ display: loading ? "none" : "block" }}>
-              <Image
-                src="/View/DSC04910-X.webp"
-                fluid
-                className="custom-pic"
-                onLoad={() => setLoading(false)}
-              />
+              <Container>
+                <Image
+                  src="/View/x-portrait-04.webp"
+                  fluid
+                  className="custom-pic"
+                  onLoad={() => setLoading(false)}
+                />
+              </Container>
             </div>
           </Col>
         </Row>
       </Container>
-    </MainLayout>
+
   );
 }
 

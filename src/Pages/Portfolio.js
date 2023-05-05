@@ -6,11 +6,13 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 // import { Container, Row } from "react-bootstrap";
 import { ImagePor, ImageLand, ImageEvent } from "../Components/Gallery/Images";
+import { Container } from "react-bootstrap";
 
 function Portfolio() {
 
   return (
-    <MainLayout>
+    <>
+    {/* <MainLayout> */}
       {/* <Container> */}
       <h2 className="ms-auto">PORTFOLIO</h2>
       <Tabs
@@ -29,7 +31,8 @@ function Portfolio() {
           <ImagePor />
         </Tab>
       </Tabs>
-    </MainLayout>
+    {/* </MainLayout> */}
+    </>
   );
 }
 
