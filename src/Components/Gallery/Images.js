@@ -3,6 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Loader from "../Spinner/LoadingImg";
+import { motion } from "framer-motion";
 
 const portraits = [
   {
@@ -121,6 +122,8 @@ const events = [
   },
 ];
 
+const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+
 export function ImagePor() {
   const [loading, setLoading] = useState(true);
   const counter = useRef(0);
@@ -128,7 +131,7 @@ export function ImagePor() {
   const imageLoader = () => {
     counter.current += 1;
 
-    console.log(counter)
+    console.log(counter);
 
     if (counter.current >= portraits.length) {
       setLoading(false);
@@ -138,26 +141,33 @@ export function ImagePor() {
 
   return (
     <Container>
-      <Row>
-        <div style={{ display: loading ? "block" : "none" }}>
-          <Loader />
-        </div>
-        <div style={{ display: loading ? "none" : "block" }}>
-          <ImageList variant="woven" cols={3} gap={8}>
-            {portraits.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  // loading="lazy"
-                  onLoad={imageLoader}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      </Row>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible,
+        }}
+      >
+        <Row>
+          {/* <div style={{ display: loading ? "block" : "none" }}>
+            <Loader />
+          </div>
+          <div style={{ display: loading ? "none" : "block" }}> */}
+            <ImageList variant="woven" cols={3} gap={8}>
+              {portraits.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}?w=161&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    onLoad={imageLoader}
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          {/* </div> */}
+        </Row>
+      </motion.div>
     </Container>
   );
 }
@@ -171,7 +181,7 @@ export function ImageLand() {
   const imageLoader = () => {
     counter_land.current += 1;
 
-    console.log("At land " + counter_land)
+    console.log("At land " + counter_land);
 
     if (counter_land.current >= landscape.length) {
       setLoadingLand(false);
@@ -181,26 +191,33 @@ export function ImageLand() {
 
   return (
     <Container>
-      <Row>
-        <div style={{ display: loadingLand ? "block" : "none" }}>
-          <Loader />
-        </div>
-        <div style={{ display: loadingLand ? "none" : "block" }}>
-          <ImageList variant="woven" cols={3} gap={8}>
-            {landscape.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  // loading="lazy"
-                  onLoad={imageLoader}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      </Row>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible,
+        }}
+      >
+        <Row>
+          {/* <div style={{ display: loadingLand ? "block" : "none" }}>
+            <Loader />
+          </div>
+          <div style={{ display: loadingLand ? "none" : "block" }}> */}
+            <ImageList variant="woven" cols={3} gap={8}>
+              {landscape.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}?w=161&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    onLoad={imageLoader}
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          {/* </div> */}
+        </Row>
+      </motion.div>
     </Container>
   );
 }
@@ -220,26 +237,33 @@ export function ImageEvent() {
 
   return (
     <Container>
-      <Row>
-        <div style={{ display: loadingEvent ? "block" : "none" }}>
-          <Loader />
-        </div>
-        <div style={{ display: loadingEvent ? "none" : "block" }}>
-          <ImageList variant="woven" cols={3} gap={8}>
-            {events.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  // loading="lazy"
-                  onLoad={imageLoader}
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </div>
-      </Row>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible,
+        }}
+      >
+        <Row>
+          {/* <div style={{ display: loadingEvent ? "block" : "none" }}>
+            <Loader />
+          </div>
+          <div style={{ display: loadingEvent ? "none" : "block" }}> */}
+            <ImageList variant="woven" cols={3} gap={8}>
+              {events.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}?w=161&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    // onLoad={imageLoader}
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          {/* </div> */}
+        </Row>
+      </motion.div>
     </Container>
   );
 }

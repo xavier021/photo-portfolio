@@ -3,11 +3,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./MainLayout.css";
-import Footer from "../Footer/Footer";
+// import Footer from "../Footer/Footer";
 import { Image, NavItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faPinterest } from "@fortawesome/free-brands-svg-icons";
-import { faCamera } from "@fortawesome/free-solid-svg-icons";
+// import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 

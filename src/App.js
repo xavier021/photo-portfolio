@@ -5,21 +5,17 @@ import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import Portfolio from "./Pages/Portfolio";
 import MainLayout from "./Components/Layout/MainLayout";
+import AnimatedRoutes from "./Components/AnimatedRoutes/AnimatedRoutes";
+import { Container } from "react-bootstrap";
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <>
-      {/* <MainLayout /> */}
-      {/* <div> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      {/* </div> */}
+        <MainLayout>
+          <AnimatedRoutes />
+        </MainLayout>
     </>
   );
 }

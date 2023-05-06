@@ -7,39 +7,52 @@ import Tabs from "react-bootstrap/Tabs";
 // import { Container, Row } from "react-bootstrap";
 import { ImagePor, ImageLand, ImageEvent } from "../Components/Gallery/Images";
 import { Container } from "react-bootstrap";
+import { motion } from "framer-motion";
+import {PageAnimated, itemVariants, visible} from "../Components/AnimatedRoutes/PageAnimated";
 
 function Portfolio() {
   return (
     <>
-      <MainLayout>
+      {/* <MainLayout> */}
+      <PageAnimated>
         <Container className="portofolio-content">
-          <div className="card portofolio-header">
-            <h2>PORTFOLIO</h2>
-          </div>
-
-          <Tabs
-            defaultActiveKey="events"
-            id="uncontrolled-tab-example"
-            className="mb-3 custom-tab justify-content-end"
-            variant="pills"
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: -20 },
+              visible,
+            }}
+            className="card portofolio-header"
           >
-            <Tab
-              eventKey="events"
-              title="Events"
-              className="pill-custom"
-              mountOnEnter
+            <motion.h2>ALBUMS</motion.h2>
+          </motion.div>
+          <motion.div
+            variants={itemVariants}
+          >
+            <Tabs
+              defaultActiveKey="events"
+              id="uncontrolled-tab-example"
+              className="mb-3 custom-tab justify-content-end"
+              variant="pills"
             >
-              <ImageEvent />
-            </Tab>
-            <Tab eventKey="landscape" title="Landscape" mountOnEnter>
-              <ImageLand />
-            </Tab>
-            <Tab eventKey="portrait" title="Portrait" mountOnEnter>
-              <ImagePor />
-            </Tab>
-          </Tabs>
+              <Tab
+                eventKey="events"
+                title="Events"
+                className="pill-custom"
+                mountOnEnter
+              >
+                <ImageEvent />
+              </Tab>
+              <Tab eventKey="landscape" title="Landscape" mountOnEnter>
+                <ImageLand />
+              </Tab>
+              <Tab eventKey="portrait" title="Portrait" mountOnEnter>
+                <ImagePor />
+              </Tab>
+            </Tabs>
+          </motion.div>
         </Container>
-      </MainLayout>
+        </PageAnimated>
+      {/* </MainLayout> */}
     </>
   );
 }

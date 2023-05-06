@@ -1,5 +1,8 @@
 import { ImageList, ImageListItem } from "@mui/material";
 import React from "react";
+import { motion } from "framer-motion";
+import { PageAnimated } from "../AnimatedRoutes/PageAnimated";
+
 
 const pictures = [
   {
@@ -15,7 +18,7 @@ const pictures = [
   {
     img: "/View/DSC05005(LAND).webp",
     title: "Kitchen",
-    rows:2,
+    rows: 2,
   },
   {
     img: "/View/DSC05047(LAND).webp",
@@ -30,10 +33,9 @@ const pictures = [
   {
     img: "/View/DSC04399_ARM_LAND.webp",
     title: "Portrait 4",
-    cols:2,
+    cols: 2,
   },
   {
-    
     img: "/View/DSC04435_ARM_LAND.webp",
     title: "Portrait 5",
     rows: 2,
@@ -42,7 +44,7 @@ const pictures = [
   {
     img: "/View/DSC05053(LAND).webp",
     title: "Books",
-    rows:2,
+    rows: 2,
   },
   {
     img: "/View/DSC04302_ARM_LAND.webp",
@@ -72,21 +74,22 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 export default function QuiltedImageList() {
   return (
-    <ImageList
-      variant="quilted"
-      cols={4}
-      rowHeight={300}
-      
-    >
-      {pictures.map((pic) => (
-        <ImageListItem key={pic.img} cols={pic.cols || 1} rows={pic.rows || 1}>
-          <img
-            {...srcset(pic.img, 300, pic.rows, pic.cols)}
-            alt={pic.title}
-            
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
+    <PageAnimated>
+      <ImageList variant="quilted" cols={4} rowHeight={300}>
+        {pictures.map((pic) => (
+          <ImageListItem
+            key={pic.img}
+            cols={pic.cols || 1}
+            rows={pic.rows || 1}
+            loading="lazy"
+          >
+            <img
+              {...srcset(pic.img, 300, pic.rows, pic.cols)}
+              alt={pic.title}
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+    </PageAnimated>
   );
 }
