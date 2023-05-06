@@ -4,19 +4,21 @@ import { Col, Row, Container, Image } from "react-bootstrap";
 import "./Home.css";
 import { Box } from "@mui/material";
 import Loader from "../Components/Spinner/LoadingImg";
+import QuiltedImageList from "../Components/Gallery/QuiltedImages";
+
 
 function Home() {
   const [loading, setLoading] = useState(true);
 
   return (
-    // <MainLayout>
-      <Container className="custom-container" fluid>
+    <MainLayout>
+      {/* <Container className="custom-container" fluid>
         <Row className="custom-row">
           <Col>
             <h2 className="custom-name">Xavier Santana</h2>
             <h1 className="custom-title">PHOTOGRPAHER</h1>
           </Col>
-          <Col className="custom-col" md>
+          <Col className="custom-col" lg>
             <div
               className="loader-div"
               style={{ display: loading ? "block" : "none" }}
@@ -29,14 +31,16 @@ function Home() {
                   src="/View/x-portrait-04.webp"
                   fluid
                   className="custom-pic"
+                  roundedCircle
                   onLoad={() => setLoading(false)}
                 />
               </Container>
             </div>
           </Col>
         </Row>
-      </Container>
-
+      </Container> */}
+      <QuiltedImageList/>
+    </MainLayout>
   );
 }
 

@@ -1,0 +1,14 @@
+.about-content{
+    background-color: #141010;
+    color: white;
+    /* text-align: center; */
+    font-weight: 300;
+    margin: auto;
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+    line-height: 1.5rem;
+}

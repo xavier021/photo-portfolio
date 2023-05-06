@@ -57,10 +57,9 @@ const MainLayout = ({ children }) => {
           <Image
             src="/View/Signature-Black.png"
             className="logo-custom"
-            fluid
           />
         </Container>
-        <div className="content">{children}</div>
+        <Container className="content">{children}</Container>
         {/* <Footer/> */}
       </Container>
     </>
