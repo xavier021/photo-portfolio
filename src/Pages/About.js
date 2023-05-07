@@ -13,10 +13,10 @@ function About() {
 
   return (
     // <MainLayout>
-    <Container fluid>
+    <Container xxl>
       <PageAnimated>
-        <Row>
-          <Col xxl>
+        <Row className="justify-content-md-center">
+          <Col className="custom-pic" xxl>
             {/* <Container lg> */}
               <motion.div variants={itemVariants}>
                 <Image
@@ -25,6 +25,7 @@ function About() {
                   className="custom-pic"
                   roundedCircle
                 />
+                {/* <img src="/View/x-portrait-04.webp" className="rounded mx-auto d-block img-fluid" alt="..."/> */}
               </motion.div>
             {/* </Container> */}
           </Col>

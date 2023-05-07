@@ -1,3 +1,9 @@
+
+.custom-pic{
+    display: flex;
+    align-items: center;
+}
+
 .about-content{
     background-color: #141010;
     color: white;
