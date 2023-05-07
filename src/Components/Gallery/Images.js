@@ -7,117 +7,117 @@ import { motion } from "framer-motion";
 
 const portraits = [
   {
-    img: "/View/DSC04159(POR).webp",
+    img: "/View/DSC04159(POR).jpg",
     title: "Portrait 4",
   },
   {
-    img: "/View/DSC04253(POR).webp",
+    img: "/View/DSC04253(POR).jpg",
     title: "Portrait 5",
   },
   {
-    img: "/View/DSC04285(POR).webp",
+    img: "/View/DSC04285(POR).jpg",
     title: "Portrait 4",
   },
   {
-    img: "/View/DSC03122(Bryan-POR).webp",
+    img: "/View/DSC03122(Bryan-POR).jpg",
     title: "Books",
   },
   {
-    img: "/View/DSC03124(Bryan-POR).webp",
+    img: "/View/DSC03124(Bryan-POR).jpg",
     title: "Chairs",
   },
   {
-    img: "/View/DSC03145(Bryan-POR).webp",
+    img: "/View/DSC03145(Bryan-POR).jpg",
     title: "Candle",
   },
   {
-    img: "/View/DSC02606_KEN-POR_.webp",
+    img: "/View/DSC02606(KEN-POR).jpg",
     title: "Bed",
   },
   {
-    img: "/View/DSC02552_KEN_.webp",
+    img: "/View/DSC02552(KEN).jpg",
     title: "Kitchen",
   },
   {
-    img: "/View/DSC02633_KEN_.webp",
+    img: "/View/DSC02633(KEN).jpg",
     title: "Sink",
   },
 ];
 
 const landscape = [
   {
-    img: "/View/DSC04156(LAND).webp",
+    img: "/View/DSC04156(LAND).jpg",
     title: "Bed",
   },
   {
-    img: "/View/DSC04994(LAND).webp",
+    img: "/View/DSC04994(LAND).jpg",
     title: "Bed",
   },
   {
-    img: "/View/DSC05005(LAND).webp",
+    img: "/View/DSC05005(LAND).jpg",
     title: "Kitchen",
   },
   {
-    img: "/View/DSC05047(LAND).webp",
+    img: "/View/DSC05047(LAND).jpg",
     title: "Sink",
   },
   {
-    img: "/View/DSC05098(LAND).webp",
+    img: "/View/DSC05098(LAND).jpg",
     title: "Books",
   },
   {
-    img: "/View/DSC05053(LAND).webp",
+    img: "/View/DSC05053(LAND).jpg",
     title: "Books",
   },
   {
-    img: "/View/DSC05154(LAND).webp",
+    img: "/View/DSC05154(LAND).jpg",
     title: "Chairs",
   },
   {
-    img: "/View/DSC05203(LAND).webp",
+    img: "/View/DSC05203(LAND).jpg",
     title: "Candle",
   },
   {
-    img: "/View/DJI_0003(LAND).webp",
+    img: "/View/DJI_0003(LAND).jpg",
     title: "Candle",
   },
   {
-    img: "/View/DJI_0007(LAND).webp",
+    img: "/View/DJI_0007(LAND).jpg",
     title: "Candle",
   },
   {
-    img: "/View/DJI_0038(LAND).webp",
+    img: "/View/DJI_0038(LAND).jpg",
     title: "Candle",
   },
   {
-    img: "/View/DJI_0042(LAND).webp",
+    img: "/View/DJI_0042(LAND).jpg",
     title: "Candle",
   },
 ];
 
 const events = [
   {
-    img: "/View/DSC04144_X_C_.webp",
+    img: "/View/DSC04144(X&C).jpg",
     title: "Portrait 5",
   },
   {
-    img: "/View/DSC03967-Edit(X&C).webp",
+    img: "/View/DSC03967-Edit(X&C).jpg",
     title: "Portrait 4",
   },
   {
-    img: "/View/DSC04150_X_C_.webp",
+    img: "/View/DSC04150(X&C).jpg",
     title: "Portrait 4",
   },
-  {
-    img: "/View/DSC02717_K_M_.webp",
+    {
+      img: "/View/DSC02717(K&M).jpg",
     title: "Bed",
   },
   {
-    img: "/View/DSC02721-Edit_K_M_.webp",
+    img: "/View/DSC02721-Edit(K&M).jpg",
     title: "Kitchen",
   },
   {
-    img: "/View/DSC02914-Edit_K_M_.webp",
+    img: "/View/DSC02914-Edit(K&M).jpg",
     title: "Sink",
   },
 ];
