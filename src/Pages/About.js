@@ -16,7 +16,7 @@ function About() {
     <Container xxl>
       <PageAnimated>
         <Row className="justify-content-md-center">
-          <Col className="custom-pic" xxl>
+          <Col className="custom-pic" md>
             {/* <Container lg> */}
               <motion.div variants={itemVariants}>
                 <Image
@@ -29,7 +29,7 @@ function About() {
               </motion.div>
             {/* </Container> */}
           </Col>
-          <Col className="card about-content" xxl>
+          <Col className="card about-content" md>
             <motion.div variants={itemVariants} className="card-body">
               Hi, I'm Xavier Santana, and I'm a photographer who loves to
               capture the beauty and uniqueness of the world around me. With a
