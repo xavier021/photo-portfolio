@@ -16,8 +16,8 @@ function About() {
     <Container fluid>
       <PageAnimated>
         <Row>
-          <Col lg>
-            <Container>
+          <Col xxl>
+            {/* <Container lg> */}
               <motion.div variants={itemVariants}>
                 <Image
                   src="/View/x-portrait-04.webp"
@@ -26,9 +26,9 @@ function About() {
                   roundedCircle
                 />
               </motion.div>
-            </Container>
+            {/* </Container> */}
           </Col>
-          <Col className="card about-content" lg>
+          <Col className="card about-content" xxl>
             <motion.div variants={itemVariants} className="card-body">
               Hi, I'm Xavier Santana, and I'm a photographer who loves to
               capture the beauty and uniqueness of the world around me. With a
