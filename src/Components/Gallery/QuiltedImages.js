@@ -2,6 +2,7 @@ import { ImageList, ImageListItem } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 import { PageAnimated, itemVariants } from "../AnimatedRoutes/PageAnimated";
+import { Container } from "react-bootstrap";
 
 const pictures = [
   {
@@ -73,24 +74,26 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 export default function QuiltedImageList() {
   return (
-    <PageAnimated>
-      <motion.div variants={itemVariants}>
-        <ImageList variant="quilted" cols={4} rowHeight={300}>
-          {pictures.map((pic) => (
-            <ImageListItem
-              key={pic.img}
-              cols={pic.cols || 1}
-              rows={pic.rows || 1}
-              loading="lazy"
-            >
-              <img
-                {...srcset(pic.img, 300, pic.rows, pic.cols)}
-                alt={pic.title}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </motion.div>
-    </PageAnimated>
+    <Container fluid>
+      <PageAnimated>
+        <motion.div variants={itemVariants}>
+          <ImageList variant="quilted" cols={4} rowHeight={300}>
+            {pictures.map((pic) => (
+              <ImageListItem
+                key={pic.img}
+                cols={pic.cols || 1}
+                rows={pic.rows || 1}
+                loading="lazy"
+              >
+                <img
+                  {...srcset(pic.img, 300, pic.rows, pic.cols)}
+                  alt={pic.title}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </motion.div>
+      </PageAnimated>
+    </Container>
   );
 }

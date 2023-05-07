@@ -148,10 +148,6 @@ export function ImagePor() {
         }}
       >
         <Row>
-          {/* <div style={{ display: loading ? "block" : "none" }}>
-            <Loader />
-          </div>
-          <div style={{ display: loading ? "none" : "block" }}> */}
             <ImageList variant="woven" cols={3} gap={8}>
               {portraits.map((item) => (
                 <ImageListItem key={item.img}>
@@ -198,10 +194,6 @@ export function ImageLand() {
         }}
       >
         <Row>
-          {/* <div style={{ display: loadingLand ? "block" : "none" }}>
-            <Loader />
-          </div>
-          <div style={{ display: loadingLand ? "none" : "block" }}> */}
             <ImageList variant="woven" cols={3} gap={8}>
               {landscape.map((item) => (
                 <ImageListItem key={item.img}>
@@ -215,7 +207,6 @@ export function ImageLand() {
                 </ImageListItem>
               ))}
             </ImageList>
-          {/* </div> */}
         </Row>
       </motion.div>
     </Container>
@@ -244,10 +235,6 @@ export function ImageEvent() {
         }}
       >
         <Row>
-          {/* <div style={{ display: loadingEvent ? "block" : "none" }}>
-            <Loader />
-          </div>
-          <div style={{ display: loadingEvent ? "none" : "block" }}> */}
             <ImageList variant="woven" cols={3} gap={8}>
               {events.map((item) => (
                 <ImageListItem key={item.img}>
@@ -261,7 +248,6 @@ export function ImageEvent() {
                 </ImageListItem>
               ))}
             </ImageList>
-          {/* </div> */}
         </Row>
       </motion.div>
     </Container>

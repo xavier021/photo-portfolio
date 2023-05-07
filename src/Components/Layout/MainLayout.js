@@ -10,7 +10,6 @@ import { faInstagram, faPinterest } from "@fortawesome/free-brands-svg-icons";
 // import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-
 const MainLayout = ({ children }) => {
   return (
     <>
@@ -30,16 +29,24 @@ const MainLayout = ({ children }) => {
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav>
                 <Nav.Item eventkey={1} href="/">
-                  <Nav.Link as={Link} active={{}} to="/">Home</Nav.Link>
+                  <Nav.Link as={Link} active={{}} to="/">
+                    Home
+                  </Nav.Link>
                 </Nav.Item>
                 <Nav.Item eventkey={2} href="/portfolio">
-                  <Nav.Link as={Link} active={{}} to="/portfolio">Portofolio</Nav.Link>
+                  <Nav.Link as={Link} active={{}} to="/portfolio">
+                    Portofolio
+                  </Nav.Link>
                 </Nav.Item>
                 <Nav.Item eventkey={3} href="/about">
-                  <Nav.Link as={Link} active={{}} to="/about">About</Nav.Link>
+                  <Nav.Link as={Link} active={{}} to="/about">
+                    About
+                  </Nav.Link>
                 </Nav.Item>
                 <Nav.Item eventkey={4} href="/contact">
-                  <Nav.Link as={Link} active={{}} to="/contact">Contact</Nav.Link>
+                  <Nav.Link as={Link} active={{}} to="/contact">
+                    Contact
+                  </Nav.Link>
                 </Nav.Item>
               </Nav>
               <Nav className="ms-auto navbar-icons">
@@ -54,10 +61,13 @@ const MainLayout = ({ children }) => {
           </Container>
         </Navbar>
         <Container className="logo-custom-container">
-          <Image
-            src="/View/Signature-Black.png"
-            className="logo-custom"
-          />
+          <a href="/">
+            <Image
+              src="/View/Signature-Black.png"
+              className="logo-custom"
+              to="/"
+            />
+          </a>
         </Container>
         <Container className="content">{children}</Container>
         {/* <Footer/> */}
