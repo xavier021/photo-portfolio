@@ -8,14 +8,15 @@ function Contact() {
   return (
     <PageAnimated>
       <Container>
-        <motion.h3
+        <motion.div
           variants={{
             hidden: { opacity: 0, y: -20 },
             visible,
           }}
+          className="card portofolio-header"
         >
-          Contact
-        </motion.h3>
+          <motion.h2>Contact</motion.h2>
+        </motion.div>
       </Container>
       </PageAnimated>
   );

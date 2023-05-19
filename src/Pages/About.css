@@ -1,4 +1,6 @@
-
+/* p{
+    margin: 2rem;
+} */
 .custom-pic{
     display: flex;
     align-items: center;
@@ -13,8 +15,5 @@
 }
 
 .card-body{
-    display: flex;
-    align-items: center;
-    white-space: pre-wrap;
     line-height: 1.5rem;
 }

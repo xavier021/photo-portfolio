@@ -26,6 +26,8 @@ button.nav-link:hover{
 .card.portofolio-header{
     background-color: #141010;
     text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .custom-tab{
