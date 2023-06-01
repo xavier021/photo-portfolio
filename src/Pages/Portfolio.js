@@ -8,7 +8,11 @@ import Tabs from "react-bootstrap/Tabs";
 import { ImagePor, ImageLand, ImageEvent } from "../Components/Gallery/Images";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
-import {PageAnimated, itemVariants, visible} from "../Components/AnimatedRoutes/PageAnimated";
+import {
+  PageAnimated,
+  itemVariants,
+  visible,
+} from "../Components/AnimatedRoutes/PageAnimated";
 
 function Portfolio() {
   return (
@@ -25,15 +29,19 @@ function Portfolio() {
           >
             <motion.h2>ALBUMS</motion.h2>
           </motion.div>
-          <motion.div
-            variants={itemVariants}
-          >
+          <motion.div variants={itemVariants}>
             <Tabs
-              defaultActiveKey="events"
+              defaultActiveKey="portrait"
               id="uncontrolled-tab-example"
               className="mb-3 custom-tab justify-content-end"
               variant="pills"
             >
+              <Tab eventKey="portrait" title="Portrait" mountOnEnter>
+                <ImagePor />
+              </Tab>
+              <Tab eventKey="landscape" title="Landscape" mountOnEnter>
+                <ImageLand />
+              </Tab>
               <Tab
                 eventKey="events"
                 title="Events"
@@ -42,16 +50,10 @@ function Portfolio() {
               >
                 <ImageEvent />
               </Tab>
-              <Tab eventKey="landscape" title="Landscape" mountOnEnter>
-                <ImageLand />
-              </Tab>
-              <Tab eventKey="portrait" title="Portrait" mountOnEnter>
-                <ImagePor />
-              </Tab>
             </Tabs>
           </motion.div>
         </Container>
-        </PageAnimated>
+      </PageAnimated>
       {/* </MainLayout> */}
     </>
   );

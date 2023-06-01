@@ -39,6 +39,30 @@ const portraits = [
     title: "Candle",
   },
   {
+    img: "/View/DSC06001.jpg",
+    title: "Sink",
+  },
+  {
+    img: "/View/DSC05887.jpg",
+    title: "Sink",
+  },
+  {
+    img: "/View/DSC06069.jpg",
+    title: "Sink",
+  },
+  {
+    img: "/View/DSC06034.jpg",
+    title: "Sink",
+  },
+  {
+    img: "/View/DSC06053.jpg",
+    title: "Sink",
+  },
+  {
+    img: "/View/DSC06032.jpg",
+    title: "Sink",
+  },
+  {
     img: "/View/DSC02606(KEN-POR).jpg",
     title: "Bed",
   },
