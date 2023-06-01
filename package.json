@@ -22,7 +22,8 @@
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.10.0",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.10.0"
   },
   "scripts": {
     "start": "react-scripts start",

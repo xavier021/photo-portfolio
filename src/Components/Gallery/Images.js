@@ -4,6 +4,14 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Loader from "../Spinner/LoadingImg";
 import { motion } from "framer-motion";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const portraits = [
   {
@@ -108,8 +116,8 @@ const events = [
     img: "/View/DSC04150(X&C).jpg",
     title: "Portrait 4",
   },
-    {
-      img: "/View/DSC02717(K&M).jpg",
+  {
+    img: "/View/DSC02717(K&M).jpg",
     title: "Bed",
   },
   {
@@ -125,19 +133,9 @@ const events = [
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 export function ImagePor() {
-  const [loading, setLoading] = useState(true);
-  const counter = useRef(0);
+  const [index, setIndex] = useState(-1);
 
-  const imageLoader = () => {
-    counter.current += 1;
-
-    console.log(counter);
-
-    if (counter.current >= portraits.length) {
-      setLoading(false);
-      console.log("Por " + counter);
-    }
-  };
+  const slides = portraits.map(({ img }) => ({ src: img }));
 
   return (
     <Container>
@@ -148,19 +146,26 @@ export function ImagePor() {
         }}
       >
         <Row>
-            <ImageList variant="woven" cols={3} gap={8}>
-              {portraits.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}?w=161&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading="lazy"
-                    onLoad={imageLoader}
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {portraits.map((item, index) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  onClick={() => setIndex(index)}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+          <Lightbox
+            slides={slides}
+            open={index >= 0}
+            index={index}
+            close={() => setIndex(-1)}
+            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+          />
           {/* </div> */}
         </Row>
       </motion.div>
@@ -169,21 +174,9 @@ export function ImagePor() {
 }
 
 export function ImageLand() {
-  const [loadingLand, setLoadingLand] = useState(true);
-  const counter_land = useRef(0);
+  const [index, setIndex] = useState(-1);
 
-  console.log("Counter at Land" + counter_land);
-
-  const imageLoader = () => {
-    counter_land.current += 1;
-
-    console.log("At land " + counter_land);
-
-    if (counter_land.current >= landscape.length) {
-      setLoadingLand(false);
-      console.log("Land " + counter_land);
-    }
-  };
+  const slides = landscape.map(({ img }) => ({ src: img }));
 
   return (
     <Container>
@@ -194,19 +187,26 @@ export function ImageLand() {
         }}
       >
         <Row>
-            <ImageList variant="woven" cols={3} gap={8}>
-              {landscape.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}?w=161&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading="lazy"
-                    onLoad={imageLoader}
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {landscape.map((item, index) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  onClick={() => setIndex(index)}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+          <Lightbox
+            slides={slides}
+            open={index >= 0}
+            index={index}
+            close={() => setIndex(-1)}
+            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+          />
         </Row>
       </motion.div>
     </Container>
@@ -214,17 +214,9 @@ export function ImageLand() {
 }
 
 export function ImageEvent() {
-  const [loadingEvent, setLoadingEvent] = useState(true);
-  const counter = useRef(0);
+  const [index, setIndex] = useState(-1);
 
-  console.log("Counter at Event " + counter);
-
-  const imageLoader = () => {
-    counter.current += 1;
-    if (counter.current >= events.length) {
-      setLoadingEvent(false);
-    }
-  };
+  const slides = events.map(({ img }) => ({ src: img }));
 
   return (
     <Container>
@@ -235,19 +227,26 @@ export function ImageEvent() {
         }}
       >
         <Row>
-            <ImageList variant="woven" cols={3} gap={8}>
-              {events.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}?w=161&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading="lazy"
-                    // onLoad={imageLoader}
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
+          <ImageList variant="woven" cols={3} gap={8}>
+            {events.map((item, index) => (
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=161&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                  onClick={() => setIndex(index)}
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+          <Lightbox
+            slides={slides}
+            open={index >= 0}
+            index={index}
+            close={() => setIndex(-1)}
+            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+          />
         </Row>
       </motion.div>
     </Container>

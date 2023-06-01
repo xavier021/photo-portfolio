@@ -1,8 +1,16 @@
 import { ImageList, ImageListItem } from "@mui/material";
-import React from "react";
+import React, {useState} from "react";
 import { motion } from "framer-motion";
 import { PageAnimated, itemVariants } from "../AnimatedRoutes/PageAnimated";
 import { Container } from "react-bootstrap";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 const pictures = [
   {
@@ -73,17 +81,23 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 export default function QuiltedImageList() {
+
+  const [index, setIndex] = useState(-1);
+
+  const slides = pictures.map(({ img }) => ({ src: img }));
+
   return (
     <Container fluid>
       <PageAnimated>
         <motion.div variants={itemVariants}>
           <ImageList variant="quilted" cols={4} rowHeight={300}>
-            {pictures.map((pic) => (
+            {pictures.map((pic, index) => (
               <ImageListItem
                 key={pic.img}
                 cols={pic.cols || 1}
                 rows={pic.rows || 1}
                 loading="lazy"
+                onClick={() => setIndex(index)}
               >
                 <img
                   {...srcset(pic.img, 300, pic.rows, pic.cols)}
@@ -92,6 +106,13 @@ export default function QuiltedImageList() {
               </ImageListItem>
             ))}
           </ImageList>
+          <Lightbox
+            slides={slides}
+            open={index >= 0}
+            index={index}
+            close={() => setIndex(-1)}
+            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+          />
         </motion.div>
       </PageAnimated>
     </Container>

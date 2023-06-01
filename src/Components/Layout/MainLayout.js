@@ -51,10 +51,22 @@ const MainLayout = ({ children }) => {
               </Nav>
               <Nav className="ms-auto navbar-icons">
                 <Nav.Item>
-                  <FontAwesomeIcon icon={faInstagram} />
+                  <Nav.Link
+                    as={Link}
+                    active={{}}
+                    to="https://www.pinterest.com/xsantana001"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
-                  <FontAwesomeIcon icon={faPinterest} />
+                <Nav.Item href="https://www.pinterest.com/xsantana001">
+                  <Nav.Link
+                    as={Link}
+                    active={{}}
+                    to="https://www.pinterest.com/xsantana001"
+                  >
+                    <FontAwesomeIcon icon={faPinterest} />
+                  </Nav.Link>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>
