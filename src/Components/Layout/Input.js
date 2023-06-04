@@ -21,12 +21,6 @@ export const Input = ({ ...props }) => {
 
   return (
     <>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: -20 },
-          visible,
-        }}
-      >
         <div className="custom-lbl">
           <label className="contact-lb">{props.label}</label>
           <AnimatePresence mode="wait" initial={false}>
@@ -43,7 +37,6 @@ export const Input = ({ ...props }) => {
           className="form-control"
           {...register(props.name, props.validation)}
         />
-      </motion.div>
     </>
   );
 };
@@ -59,12 +52,6 @@ export const TextArea = ({ label, type, placeholder, name }) => {
 
   return (
     <>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: -20 },
-          visible,
-        }}
-      >
         <div className="custom-lbl">
           <label className="contact-lb">{label}</label>
           <AnimatePresence mode="wait" initial={false}>
@@ -87,7 +74,6 @@ export const TextArea = ({ label, type, placeholder, name }) => {
             },
           })}
         />
-      </motion.div>
     </>
   );
 };

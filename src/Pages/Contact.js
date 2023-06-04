@@ -53,6 +53,12 @@ function Contact() {
         >
           <motion.h2>Contact</motion.h2>
         </motion.div>
+        <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -20 },
+          visible,
+        }}
+      >
         <FormProvider {...methods}>
           <form onSubmit={(e) => e.preventDefault()} noValidate>
             <div className="row">
@@ -137,7 +143,7 @@ function Contact() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                   duration: 0.8,
-                  delay: 2,
+                  delay: 0.7,
                   ease: [0, 0.71, 0.2, 1.01],
                 }}
               >
@@ -154,6 +160,7 @@ function Contact() {
             </Col>
           </form>
         </FormProvider>
+        </motion.div>
       </Container>
     </PageAnimated>
   );
