@@ -27,7 +27,7 @@ function Portfolio() {
             }}
             className="card portofolio-header"
           >
-            <motion.h2>ALBUMS</motion.h2>
+            <motion.h2>Albums</motion.h2>
           </motion.div>
           <motion.div variants={itemVariants}>
             <Tabs
