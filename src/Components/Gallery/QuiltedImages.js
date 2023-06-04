@@ -11,6 +11,7 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "./QuiltedImages.css"
 
 const pictures = [
   {
@@ -87,7 +88,7 @@ export default function QuiltedImageList() {
   const slides = pictures.map(({ img }) => ({ src: img }));
 
   return (
-    <Container fluid>
+    <Container>
       <PageAnimated>
         <motion.div variants={itemVariants}>
           <ImageList variant="quilted" cols={4} rowHeight={300}>
@@ -102,6 +103,7 @@ export default function QuiltedImageList() {
                 <img
                   {...srcset(pic.img, 300, pic.rows, pic.cols)}
                   alt={pic.title}
+                  className="pic-home-custom"
                 />
               </ImageListItem>
             ))}

@@ -6,6 +6,7 @@ import Loader from "../Spinner/LoadingImg";
 import { motion } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import "./Images.css"
 
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
@@ -179,6 +180,7 @@ export function ImagePor() {
                   alt={item.title}
                   loading="lazy"
                   onClick={() => setIndex(index)}
+                  className="pic-port-custom"
                 />
               </ImageListItem>
             ))}
@@ -220,6 +222,7 @@ export function ImageLand() {
                   alt={item.title}
                   loading="lazy"
                   onClick={() => setIndex(index)}
+                  className="pic-port-custom"
                 />
               </ImageListItem>
             ))}
@@ -260,6 +263,7 @@ export function ImageEvent() {
                   alt={item.title}
                   loading="lazy"
                   onClick={() => setIndex(index)}
+                  className="pic-port-custom"
                 />
               </ImageListItem>
             ))}

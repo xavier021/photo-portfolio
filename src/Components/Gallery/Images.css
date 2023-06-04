@@ -2,3 +2,13 @@
     margin-bottom: 20px;
     height: auto;
 }
+
+.pic-port-custom{
+    cursor: pointer;
+}
+
+.pic-port-custom:hover{
+    transition: 0.5s;
+    opacity: 0.5;   
+    filter: alpha(opacity=40);
+}
