@@ -5,6 +5,9 @@
 
 .pic-port-custom{
     cursor: pointer;
+    opacity: 1;
+    
+    -webkit-transition: opacity 0.5s;
 }
 
 .pic-port-custom:hover{
