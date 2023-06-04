@@ -143,7 +143,7 @@ function Contact() {
               >
               <ReCAPTCHA
                 ref={refCaptcha} 
-                sitekey="6LdjBmkmAAAAAMyznnjBM0-91azx6_xKYXUt78zB"
+                sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
                 onChange={successHandler}
                 theme="dark"
               />
