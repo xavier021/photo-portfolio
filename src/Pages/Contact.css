@@ -42,6 +42,10 @@
     float: right;
 }
 
+.contact-captcha{
+    margin-top: 1rem;
+}
+
 .btn-custom {
     -webkit-border-radius: 3;
     -moz-border-radius: 3;

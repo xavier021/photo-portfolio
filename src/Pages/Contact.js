@@ -152,6 +152,7 @@ function Contact() {
                 sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
                 onChange={successHandler}
                 theme="dark"
+                className="contact-captcha"
               />
                 <button disabled={captcha === false} type="submit" className="btn-custom" onClick={onSubmit}>
                   Send <FontAwesomeIcon icon={faPaperPlane} />{" "}
