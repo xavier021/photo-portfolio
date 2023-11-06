@@ -94,7 +94,7 @@ export default function QuiltedImageList() {
     <Container>
       <PageAnimated>
         <motion.div variants={itemVariants}>
-          <ImageList variant="quilted" cols={4} rowHeight={300} sx={{gridTemplateColumns: 'repeat(auto-fill, minmax(310px,1fr))!important'}}>
+          <ImageList variant="quilted" cols={4} rowHeight={300} sx={{display: 'grid', gap: '1', gridTemplateColumns: 'repeat(2, 1fr)!important'}}>
             {pictures.map((pic, index) => (
               <ImageListItem
                 key={pic.img}
