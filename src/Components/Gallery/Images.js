@@ -171,7 +171,7 @@ export function ImagePor() {
         }}
       >
         <Row>
-          <ImageList variant="woven" cols={3} gap={8}>
+          <ImageList variant="woven" cols={3} gap={8} sx={{mb: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(400px,1fr))!important'}}>
             {portraits.map((item, index) => (
               <ImageListItem key={item.img}>
                 <img
@@ -213,7 +213,7 @@ export function ImageLand() {
         }}
       >
         <Row>
-          <ImageList variant="woven" cols={3} gap={8}>
+          <ImageList variant="woven" cols={3} gap={8} sx={{mb: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(400px,1fr))!important'}}>
             {landscape.map((item, index) => (
               <ImageListItem key={item.img}>
                 <img
@@ -254,7 +254,7 @@ export function ImageEvent() {
         }}
       >
         <Row>
-          <ImageList variant="woven" cols={3} gap={8}>
+          <ImageList variant="woven" cols={3} gap={8} sx={{mb: 8, gridTemplateColumns: 'repeat(auto-fill, minmax(400px,1fr))!important'}}>
             {events.map((item, index) => (
               <ImageListItem key={item.img}>
                 <img

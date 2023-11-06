@@ -17,6 +17,12 @@ const pictures = [
   {
     img: "/View/DSC04156(LAND).jpg",
     title: "Bed",
+    rows: 2,
+  },
+  {
+    img: "/View/DSC05047(LAND).jpg",
+    title: "Sink",
+    rows: 2,
   },
   {
     img: "/View/DSC04994(LAND).jpg",
@@ -30,18 +36,15 @@ const pictures = [
     rows: 2,
   },
   {
-    img: "/View/DSC05047(LAND).jpg",
-    title: "Sink",
+    img: "/View/DSC05098(LAND).jpg",
+    title: "Books",
+    // cols:2,
+    rows:2,
   },
   {
     img: "/View/DSC05203(LAND).jpg",
     title: "Candle",
     rows: 2,
-    cols: 2,
-  },
-  {
-    img: "/View/DSC04399_ARM_LAND.jpg",
-    title: "Portrait 4",
     cols: 2,
   },
   {
@@ -61,16 +64,16 @@ const pictures = [
     rows: 2,
   },
   {
-    img: "/View/DJI_0042(LAND).jpg",
-    title: "Candle",
-    // cols:2,
+    img: "/View/DSC04399_ARM_LAND.jpg",
+    title: "Portrait 4",
+    cols: 2,
   },
   {
-    img: "/View/DSC05098(LAND).jpg",
-    title: "Books",
-    // cols:2,
-    // rows:2,
+    img: "/View/DJI_0042(LAND).jpg",
+    title: "Candle",
+    cols:2,
   },
+  
 ];
 
 function srcset(image, size, rows = 1, cols = 1) {
@@ -91,7 +94,7 @@ export default function QuiltedImageList() {
     <Container>
       <PageAnimated>
         <motion.div variants={itemVariants}>
-          <ImageList variant="quilted" cols={4} rowHeight={300}>
+          <ImageList variant="quilted" cols={4} rowHeight={300} sx={{gridTemplateColumns: 'repeat(auto-fill, minmax(310px,1fr))!important'}}>
             {pictures.map((pic, index) => (
               <ImageListItem
                 key={pic.img}
