@@ -54,7 +54,7 @@ const MainLayout = ({ children }) => {
                   <Nav.Link
                     as={Link}
                     active={{}}
-                    to="https://www.pinterest.com/xsantana001"
+                    to="https://www.instagram.com/_xavierphotography"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </Nav.Link>
