@@ -18,9 +18,9 @@ nav.navbar-custom{
     /* margin-bottom: 4%; */
 }
 
-.navbar-nav{
+/* .navbar-nav{
     margin-left: 5%;
-}
+} */
 .nav-link{
     transition: 0.4s ease-out;
 }
@@ -60,15 +60,12 @@ a.nav-link:hover{
 }
 
 .logo-custom{
+    /* display: flex; */
     width: 23rem;
     height: 6rem;
     margin-right: 50%;
 }
 
-/* .test{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #EEEEEE;
-    margin-bottom: 0;
-} */
+.logo-container{
+    width: 50%;
+}

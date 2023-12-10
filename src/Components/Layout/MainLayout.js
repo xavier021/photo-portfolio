@@ -26,10 +26,10 @@ const MainLayout = ({ children }) => {
         >
           <Container>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <a href="/">
+            <a className="logo-container" href="/">
               <Image
                 src="/View/Signature-Black.png"
-                className="logo-custom float-start"
+                className="logo-custom float-start container"
                 to="/"
               />
             </a>
