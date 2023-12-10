@@ -71,7 +71,7 @@ export default function Footer() {
           </ul>
           <div className="container footer-copyright">
             <p>
-              2023 © Xavier Santana Photography. Designed by Xavier Santana.
+              2023 © Xavier Santana Photography.
             </p>
           </div>
         </footer>
