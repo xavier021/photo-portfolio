@@ -29,7 +29,7 @@ const MainLayout = ({ children }) => {
             <a href="/">
               <Image
                 src="/View/Signature-Black.png"
-                className="logo-custom float-start"
+                className="logo-custom float-start container"
                 to="/"
               />
             </a>
