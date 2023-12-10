@@ -13,7 +13,6 @@ import { Input, TextArea } from "../Components/Layout/Input";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
-
 function Contact() {
   const methods = useForm();
   const [success, setSuccess] = useState(false);
@@ -43,7 +42,7 @@ function Contact() {
 
   return (
     <PageAnimated>
-      <Container>
+      <Container className="contact-container">
         <motion.div
           variants={{
             hidden: { opacity: 0, y: -20 },
@@ -163,6 +162,7 @@ function Contact() {
         </FormProvider>
         </motion.div>
       </Container>
+
     </PageAnimated>
   );
 }

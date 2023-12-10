@@ -3,30 +3,37 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./MainLayout.css";
-// import Footer from "../Footer/Footer";
 import { Image, NavItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faPinterest } from "@fortawesome/free-brands-svg-icons";
-// import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { PageAnimated, itemVariants } from "../AnimatedRoutes/PageAnimated";
+import { motion } from "framer-motion";
+import Footer from "../Footer/Footer";
 
 const MainLayout = ({ children }) => {
   return (
     <>
       <Container className="container-custom" fluid>
+      <PageAnimated>
+      <motion.div variants={itemVariants}>
         <Navbar
           collapseOnSelect
           sticky="top"
           className="navbar-custom"
           expand="lg"
-          variant="light"
+          variant="dark"
         >
           <Container>
-            {/* <Navbar.Brand href="/">
-              
-            </Navbar.Brand> */}
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
+            <a href="/">
+              <Image
+                src="/View/Signature-Black.png"
+                className="logo-custom float-start"
+                to="/"
+              />
+            </a>
+            <Navbar.Collapse id="responsive-navbar-nav ">
               <Nav>
                 <Nav.Item eventkey={1} href="/">
                   <Nav.Link as={Link} active={{}} to="/">
@@ -49,40 +56,33 @@ const MainLayout = ({ children }) => {
                   </Nav.Link>
                 </Nav.Item>
               </Nav>
-              <Nav className="ms-auto navbar-icons">
-                <Nav.Item>
-                  <Nav.Link
-                    as={Link}
-                    active={{}}
-                    to="https://www.instagram.com/_xavierphotography"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item href="https://www.pinterest.com/xsantana001">
-                  <Nav.Link
-                    as={Link}
-                    active={{}}
-                    to="https://www.pinterest.com/xsantana001"
-                  >
-                    <FontAwesomeIcon icon={faPinterest} />
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
             </Navbar.Collapse>
+            <Nav className="d-sm-inline-flex  navbar-icons">
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  active={{}}
+                  to="https://www.instagram.com/_xavierphotography"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item href="https://www.pinterest.com/xsantana001">
+                <Nav.Link
+                  as={Link}
+                  active={{}}
+                  to="https://www.pinterest.com/xsantana001"
+                >
+                  <FontAwesomeIcon icon={faPinterest} />
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
           </Container>
         </Navbar>
-        <Container className="logo-custom-container">
-          <a href="/">
-            <Image
-              src="/View/Signature-Black.png"
-              className="logo-custom"
-              to="/"
-            />
-          </a>
-        </Container>
-        <Container className="content">{children}</Container>
-        {/* <Footer/> */}
+        {children}
+        <Footer/>
+        </motion.div>
+        </PageAnimated>
       </Container>
     </>
   );

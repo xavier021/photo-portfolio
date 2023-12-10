@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import MainLayout from "../Components/Layout/MainLayout";
 import { Container, Col, Row } from "react-bootstrap";
 import "./About.css";
-import Loader from "../Components/Spinner/LoadingImg";
 import { Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 import {
@@ -12,10 +10,8 @@ import {
 } from "../Components/AnimatedRoutes/PageAnimated";
 
 function About() {
-  // const [loading, setLoading] = useState(true);
 
   return (
-    // <MainLayout>
     <>
       <PageAnimated>
         <motion.div
@@ -28,7 +24,7 @@ function About() {
           <motion.h2>About Me</motion.h2>
         </motion.div>
         <Container xxl>
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-md-center about-container">
             <Col className="custom-pic" md>
               {/* <Container lg> */}
               <motion.div variants={itemVariants}>
@@ -38,9 +34,7 @@ function About() {
                   className="custom-pic"
                   roundedCircle
                 />
-                {/* <img src="/View/x-portrait-04.webp" className="rounded mx-auto d-block img-fluid" alt="..."/> */}
               </motion.div>
-              {/* </Container> */}
             </Col>
             <Col className="card about-content" md>
               <motion.div variants={itemVariants} className="card-body">
@@ -86,7 +80,6 @@ function About() {
         </Container>
       </PageAnimated>
     </>
-    // </MainLayout>
   );
 }
 

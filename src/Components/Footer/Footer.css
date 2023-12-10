@@ -1,8 +1,10 @@
 .custom-footer{
-    padding-top: 20px;
-    width: 100%;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 2% 15%;
+    max-width: 100%;
     z-index: -1;
-    background-color: #393E46;
+    background-color: #1E2022;
     margin-bottom: 0;
     border-top-color: #222831;
 }
@@ -14,4 +16,16 @@
 
 .border-top{
     border-color: #222831;
+}
+
+.footer-copyright{
+    padding-top: 4%;
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.gallery-land{
+    background: #F0F5F9;
+    max-width: 100%;
 }

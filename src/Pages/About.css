@@ -17,3 +17,7 @@
 .card-body{
     line-height: 1.5rem;
 }
+
+.row.about-container{
+    margin: 7% 0;
+}

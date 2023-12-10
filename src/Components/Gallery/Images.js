@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import Loader from "../Spinner/LoadingImg";
 import { motion } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -14,7 +13,7 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-const portraits = [
+export const portraits = [
   {
     img: "/View/DSC04159(POR).jpg",
     title: "Portrait 4",
@@ -192,7 +191,6 @@ export function ImagePor() {
             close={() => setIndex(-1)}
             plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
           />
-          {/* </div> */}
         </Row>
       </motion.div>
     </Container>

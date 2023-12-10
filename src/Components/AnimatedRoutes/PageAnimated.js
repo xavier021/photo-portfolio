@@ -14,7 +14,6 @@ export function PageAnimated({ children }) {
     <motion.div
       initial="hidden"
       animate="visible"
-      // exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
     >
       {children}

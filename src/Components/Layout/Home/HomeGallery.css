@@ -1,0 +1,50 @@
+.gallery, .gallery-pics, .gallery-land{
+    background: #F0F5F9;
+    max-width: 100%;
+}
+
+.container .row-custom{
+    margin: 0;
+}
+
+.gallery{
+    padding: 3% 0;
+    color: black;    
+    margin: 0;
+    text-align: center;                           
+}
+
+.gallery-text, .contact-text{
+    padding: 0 15%;
+    color: black;
+}
+
+.gallery-contact{
+    background: #C9D6DF;
+    max-width: 100%;
+    padding: 5%;
+}
+
+.contact-button{
+    display: flex;
+    align-items: center;
+}
+
+.home-contact-button{
+    color: #FFFFFF !important;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 2px solid #000000;
+  background: #000000;
+}
+
+.home-contact-button:hover{
+    color: #FFFFFF !important;
+  background: #C9D6DF;
+  border: 2px solid #C9D6DF;
+}
+
+ul.css-12rr9al-MuiImageList-root{
+    margin-bottom:0;
+}

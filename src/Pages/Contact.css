@@ -1,3 +1,7 @@
+.contact-container{
+    margin-bottom: 5%;
+}
+
 .form-control{
     background-color: black;
     color: white;
@@ -38,8 +42,8 @@
 
 .success-note{
     color: #30E3CA;
-    /* display: flex; */
-    float: right;
+    display: flex;
+    justify-content: right;
 }
 
 .contact-captcha{

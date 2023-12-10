@@ -5,10 +5,6 @@ body{
     background-color: black;
 }
 
-#root{
-    /* height: 100%; */
-}
-
 .navbar-custom{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -19,8 +15,12 @@ body{
 
 nav.navbar-custom{
     background-color: black;
+    /* margin-bottom: 4%; */
 }
 
+.navbar-nav{
+    margin-left: 5%;
+}
 .nav-link{
     transition: 0.4s ease-out;
 }
@@ -39,16 +39,14 @@ a.nav-link:hover{
 }
 
 .navbar-toggler{
-    background-color: #C9D6DF;
+    border: none;
+    border-radius: 0;
 }
 
-.navbar-icons{
-    color: white;
-}
 
 .container-custom{
     height: 100%;
-    padding: 2rem;
+    padding: 0;
 }
 
 .content{
@@ -64,6 +62,7 @@ a.nav-link:hover{
 .logo-custom{
     width: 23rem;
     height: 6rem;
+    margin-right: 50%;
 }
 
 /* .test{

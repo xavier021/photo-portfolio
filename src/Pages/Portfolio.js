@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import MainLayout from "../Components/Layout/MainLayout";
 import "./Portfolio.css";
-
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-// import { Container, Row } from "react-bootstrap";
 import { ImagePor, ImageLand, ImageEvent } from "../Components/Gallery/Images";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
@@ -17,7 +14,6 @@ import {
 function Portfolio() {
   return (
     <>
-      {/* <MainLayout> */}
       <PageAnimated>
         <Container className="portofolio-content">
           <motion.div
@@ -54,7 +50,6 @@ function Portfolio() {
           </motion.div>
         </Container>
       </PageAnimated>
-      {/* </MainLayout> */}
     </>
   );
 }

@@ -1,0 +1,34 @@
+.custom-row{
+    min-height: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.col{
+    padding: 0;
+}
+
+.custom-name{
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.custom-title{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 300;
+}
+
+.custom-col{
+    padding: 0;
+}
+
+.custom-pic{
+    max-height: 20%;
+    object-fit: contain;
+}
+
+
